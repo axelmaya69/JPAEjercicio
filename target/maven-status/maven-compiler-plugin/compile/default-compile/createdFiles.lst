@@ -1,0 +1,8 @@
+com/ormjpa/logica/Alumno_.class
+com/ormjpa/persistencia/ControladoraPersistencia.class
+com/ormjpa/persistencia/exceptions/PreexistingEntityException.class
+com/ormjpa/persistencia/AlumnoJpaController.class
+com/ormjpa/logica/Alumno.class
+com/ormjpa/persistencia/exceptions/NonexistentEntityException.class
+com/ormjpa/Ormjpa.class
+com/ormjpa/persistencia/exceptions/IllegalOrphanException.class
