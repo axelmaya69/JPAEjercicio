@@ -4,6 +4,7 @@ package com.ormjpa;
 import com.ormjpa.logica.Alumno;
 import com.ormjpa.logica.Controladora;
 import com.ormjpa.persistencia.ControladoraPersistencia;
+import java.time.LocalDate;
 import java.util.Date;
 
 /**
@@ -18,13 +19,14 @@ public class Ormjpa {
 
         //se crea otro objeto a partir de la clase controladorapersistencia
         //cuya funcion tambien es crear un objeto de alumnojpa para controlarlo
+        
         //ControladoraPersistencia controler = new ControladoraPersistencia();
         //mensaje para probar tambien si funciona
         //System.out.println("Hello World!");
         
         
         Controladora control = new Controladora();
-        Alumno alu = new Alumno(22,"Axel Daniel","Bartolo","Maya",new Date());
+        Alumno alu = new Alumno(12,"Axel Daniel","Bartolo","Maya",new Date());
         
         control.crearAlumno(alu);
     }
