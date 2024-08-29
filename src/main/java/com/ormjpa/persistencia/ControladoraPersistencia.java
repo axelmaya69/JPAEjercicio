@@ -16,6 +16,6 @@ public class ControladoraPersistencia {
     
     //metodo creado para usar en la clase Controladora.java
     public void createAlumno(Alumno alu) {
-        
+    alujpa.create(alu);
     }
 }
