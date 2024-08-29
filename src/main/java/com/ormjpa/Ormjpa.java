@@ -5,6 +5,7 @@ import com.ormjpa.logica.Alumno;
 import com.ormjpa.logica.Controladora;
 import com.ormjpa.persistencia.ControladoraPersistencia;
 import java.time.LocalDate;
+import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -26,8 +27,10 @@ public class Ormjpa {
         
         
         Controladora control = new Controladora();
-        Alumno alu = new Alumno(12,"Axel Daniel","Bartolo","Maya",new Date());
+        Alumno alu = new Alumno(11,"Axel Daniel","Bartolo","Maya", new Date());
         
         control.crearAlumno(alu);
+        
+        
     }
 }
