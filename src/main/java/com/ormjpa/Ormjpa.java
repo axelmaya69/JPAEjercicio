@@ -27,7 +27,7 @@ public class Ormjpa {
         
         
         Controladora control = new Controladora();
-        Alumno alu = new Alumno(11,"Axel Daniel","Bartolo","Maya", new Date());
+        Alumno alu = new Alumno(226,"Axel Daniel","Bartolo","Maya", new Date());
         
         control.crearAlumno(alu);
         

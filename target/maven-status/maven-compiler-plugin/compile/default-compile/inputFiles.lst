@@ -1,5 +1,6 @@
 /home/axelmaya/NetBeansProjects/ormjpa/src/main/java/com/ormjpa/logica/Alumno.java
 /home/axelmaya/NetBeansProjects/ormjpa/src/main/java/com/ormjpa/persistencia/exceptions/IllegalOrphanException.java
+/home/axelmaya/NetBeansProjects/ormjpa/src/main/java/com/ormjpa/logica/Controladora.java
 /home/axelmaya/NetBeansProjects/ormjpa/src/main/java/com/ormjpa/persistencia/ControladoraPersistencia.java
 /home/axelmaya/NetBeansProjects/ormjpa/src/main/java/com/ormjpa/persistencia/exceptions/PreexistingEntityException.java
 /home/axelmaya/NetBeansProjects/ormjpa/src/main/java/com/ormjpa/persistencia/exceptions/NonexistentEntityException.java

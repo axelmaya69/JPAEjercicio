@@ -6,3 +6,4 @@ com/ormjpa/logica/Alumno.class
 com/ormjpa/persistencia/exceptions/NonexistentEntityException.class
 com/ormjpa/Ormjpa.class
 com/ormjpa/persistencia/exceptions/IllegalOrphanException.class
+com/ormjpa/logica/Controladora.class
