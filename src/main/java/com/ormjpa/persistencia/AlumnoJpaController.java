@@ -12,6 +12,7 @@ import javax.persistence.EntityNotFoundException;
 import javax.persistence.Persistence;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
+import javax.persistence.metamodel.SingularAttribute;
 
 /**
  *
@@ -137,5 +138,6 @@ public class AlumnoJpaController implements Serializable {
             em.close();
         }
     }
-    
+
+  
 }

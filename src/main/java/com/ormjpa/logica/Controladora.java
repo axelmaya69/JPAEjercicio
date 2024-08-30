@@ -19,8 +19,13 @@ public class Controladora {
         //se crea alumno a partir de esta instancia y siguienlo los 
         //warnings de la izquierda en la clase ControladoraPersistencia();
         
-        controlPer.createAlumno(alu);
+        controlPer.createAlumno(alu);       
+    }
+    
+    //creacion de metodo para borrar alumno
+    public void deleteAlumno(int id){
         
+        controlPer.deleteAlumno(id);
     }
     
 }
