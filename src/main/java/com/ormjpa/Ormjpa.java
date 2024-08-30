@@ -27,13 +27,17 @@ public class Ormjpa {
         
         
         Controladora control = new Controladora();
-        /*Alumno alu = new Alumno(226,"Axel Daniel","Bartolo","Maya", new Date());
-        
+        Alumno alu = new Alumno(1,"Axel Daniel","Bartolo","Maya", new Date());
         control.crearAlumno(alu);
-        */
+        
         
         //eliminando alumno con el id correspondiente
-        control.deleteAlumno(226);
+    //        control.deleteAlumno(226);
         
+    
+    //editando alumno
+    alu.setNombre("AXEL DANIEL");
+    control.updateAlumno(alu);
+    
     }
 }

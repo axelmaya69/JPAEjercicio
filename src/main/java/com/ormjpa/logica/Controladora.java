@@ -28,4 +28,10 @@ public class Controladora {
         controlPer.deleteAlumno(id);
     }
     
+    //creando metodo para hacer un edit de alumno
+    public void updateAlumno(Alumno alu){
+        
+        controlPer.updateAlumno(alu);
+    }
+    
 }
