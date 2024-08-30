@@ -31,7 +31,8 @@ public class ControladoraPersistencia {
             Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-
+    //editando desde la clase controladora
+    //se usa try catch por si hay algun alumno que no este o ya se haya borrado
     public void updateAlumno(Alumno alu) {
         try {
             alujpa.edit(alu);
