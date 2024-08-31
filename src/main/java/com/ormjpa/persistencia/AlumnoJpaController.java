@@ -116,6 +116,8 @@ public class AlumnoJpaController implements Serializable {
             em.close();
         }
     }
+    
+    
 
     public Alumno findAlumno(int id) {
         EntityManager em = getEntityManager();
