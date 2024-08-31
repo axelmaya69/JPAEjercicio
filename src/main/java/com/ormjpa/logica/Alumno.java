@@ -12,7 +12,6 @@ import javax.persistence.Id;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-
 @Entity //especifica la creacion de una entidad
 public class Alumno implements Serializable {
     @Id     //el primary key de la entidad
