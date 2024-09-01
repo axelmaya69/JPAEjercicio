@@ -30,5 +30,9 @@ public class Controladora {
     public void updateAlumno(Alumno alu){
         controlPer.updateAlumno(alu);
     }   
+    //metodo para buscar alumno 
+    public Alumno bringAlumno(int id){
+        return controlPer.bringAlumno(id);
+    }
     
 }
