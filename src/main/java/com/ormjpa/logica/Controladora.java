@@ -2,6 +2,7 @@
 package com.ormjpa.logica;
 
 import com.ormjpa.persistencia.ControladoraPersistencia;
+import java.util.ArrayList;
 
 /**
  *
@@ -34,5 +35,11 @@ public class Controladora {
     public Alumno bringAlumno(int id){
         return controlPer.bringAlumno(id);
     }
+    //traer a todos los alumnos
+    public ArrayList<Alumno> bringAlumnos(){
+        return controlPer.bringAlumnos();
+    }
+    
+    
     
 }

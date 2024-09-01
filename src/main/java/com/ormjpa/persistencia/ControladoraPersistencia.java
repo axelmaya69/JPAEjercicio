@@ -4,6 +4,8 @@ package com.ormjpa.persistencia;
 import com.ormjpa.logica.Alumno;
 import static com.ormjpa.logica.Alumno_.id;
 import com.ormjpa.persistencia.exceptions.NonexistentEntityException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -40,6 +42,16 @@ public class ControladoraPersistencia {
             Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
         }
         
+    }
+
+    public Alumno bringAlumno(int id) {
+        return alujpa.findAlumno(id);
+    }
+
+    public ArrayList<Alumno> bringAlumnos() {
+     List<Alumno> list= alujpa.findAlumnoEntities();
+     ArrayList<Alumno> listaAlumnos=new ArrayList<Alumno>(list);
+     return listaAlumnos;
     }
 
    
