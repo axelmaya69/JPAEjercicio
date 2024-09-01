@@ -27,8 +27,8 @@ public class Ormjpa {
         
         
         Controladora control = new Controladora();
-        Alumno alu = new Alumno(1,"Axel Daniel","Bartolo","Maya", new Date());
-        control.crearAlumno(alu);
+        //Alumno alu = new Alumno(1,"Axel Daniel","Bartolo","Maya", new Date());
+        //control.crearAlumno(alu);
         
         
         //eliminando alumno con el id correspondiente
@@ -36,8 +36,11 @@ public class Ormjpa {
         
     
     //editando alumno
-    alu.setNombre("AXEL DANIEL");
+    /*alu.setNombre("AXEL DANIEL");
     control.updateAlumno(alu);
-    
+    */
+    //trayendo un solo alumno: 
+    Alumno alu =control.bringAlumno(1);
+        System.out.println(alu.toString());
     }
 }

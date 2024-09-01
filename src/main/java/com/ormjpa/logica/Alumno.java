@@ -77,4 +77,10 @@ public class Alumno implements Serializable {
     }
  //se va a "Other Sources" y en el archivo persistence.xml se agrega a la
     //clase Alumno en Include Entity Class
+
+    @Override
+    public String toString() {
+        return "Alumno{" + "id=" + id + ", nombre=" + nombre + ", apellidoP=" + apellidoP + ", apellidoM=" + apellidoM + ", fechaNacimiento=" + fechaNacimiento + '}';
+    }
+    
 }
