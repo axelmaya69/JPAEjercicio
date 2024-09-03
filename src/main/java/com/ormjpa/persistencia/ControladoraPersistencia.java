@@ -3,6 +3,7 @@ package com.ormjpa.persistencia;
 
 import com.ormjpa.logica.Alumno;
 import static com.ormjpa.logica.Alumno_.id;
+import com.ormjpa.logica.Carrera;
 import com.ormjpa.persistencia.exceptions.NonexistentEntityException;
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +19,7 @@ public class ControladoraPersistencia {
     //se crea un nuevo objeto cuyo en esta clase a partir del alumnoJpa
     //y es su unica funcion.
     AlumnoJpaController alujpa = new AlumnoJpaController();
+    CarreraJpaController carrerajpa = new CarreraJpaController();
 
     
     //metodo creado para usar en la clase Controladora.java
@@ -47,11 +49,42 @@ public class ControladoraPersistencia {
     public Alumno bringAlumno(int id) {
         return alujpa.findAlumno(id);
     }
-
+ 
     public ArrayList<Alumno> bringAlumnos() {
      List<Alumno> list= alujpa.findAlumnoEntities();
      ArrayList<Alumno> listaAlumnos=new ArrayList<Alumno>(list);
      return listaAlumnos;
+    }
+
+    
+    public void createCarrera(Carrera carre) {
+    carrerajpa.create(carre);
+    }
+
+    public void deleteCarrera(int id) {
+        try {
+            carrerajpa.destroy(id);
+        } catch (NonexistentEntityException ex) {
+            Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public void updateCarrera(Carrera carre) {
+        try {
+            carrerajpa.edit(carre);
+        } catch (Exception ex) {
+            Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public Carrera bringCarrera(int id) {
+        return carrerajpa.findCarrera(id);
+    }
+
+    public ArrayList<Carrera> bringCarreras() {
+        List<Carrera> listCarr= carrerajpa.findCarreraEntities();
+     ArrayList<Carrera> listaCarreras=new ArrayList<Carrera>(listCarr);
+     return listaCarreras;
     }
 
    

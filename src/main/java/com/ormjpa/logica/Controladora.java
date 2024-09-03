@@ -4,7 +4,7 @@ package com.ormjpa.logica;
 import com.ormjpa.persistencia.ControladoraPersistencia;
 import java.util.ArrayList;
 
-/**
+/** 
  *
  * @author axelmaya
  * Creando clase controladora para hacer el crud de alumnos.
@@ -38,6 +38,32 @@ public class Controladora {
     //traer a todos los alumnos
     public ArrayList<Alumno> bringAlumnos(){
         return controlPer.bringAlumnos();
+    }
+    
+    
+    //metodos para carrera
+    
+        
+    public void crearCarrera(Carrera carre){
+        controlPer.createCarrera(carre);       
+    }
+    
+
+    public void deleteCarrera(int id){
+        controlPer.deleteCarrera(id);
+    }
+    
+    public void updateCarrera(Carrera carre){
+        controlPer.updateCarrera(carre);
+    }   
+    
+    
+    public Carrera bringCarrera(int id){
+        return controlPer.bringCarrera(id);
+    }
+    
+    public ArrayList<Carrera> bringCarreras(){
+        return controlPer.bringCarreras();
     }
     
     

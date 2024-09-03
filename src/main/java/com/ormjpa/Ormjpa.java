@@ -2,6 +2,7 @@
 package com.ormjpa;
 
 import com.ormjpa.logica.Alumno;
+import com.ormjpa.logica.Carrera;
 import com.ormjpa.logica.Controladora;
 import com.ormjpa.persistencia.ControladoraPersistencia;
 import java.time.LocalDate;
@@ -28,8 +29,10 @@ public class Ormjpa {
         
         
         Controladora control = new Controladora();
-        Alumno alu2 = new Alumno(30,"May","FLowers","Antonio", new Date());
-        control.crearAlumno(alu2);
+        //Alumno alu2 = new Alumno(30,"May","FLowers","Antonio", new Date());
+        //control.crearAlumno(alu2);
+        
+        
         
         
         //eliminando alumno con el id correspondiente
@@ -41,13 +44,22 @@ public class Ormjpa {
     control.updateAlumno(alu);
     */
     //trayendo un solo alumno: 
-    Alumno alu =control.bringAlumno(1);
+  /*  Alumno alu =control.bringAlumno(1);
         System.out.println(alu.toString());
         System.out.println("\n\n");
     //trayendo a todos los alunos
      ArrayList<Alumno> listaAlumnos = control.bringAlumnos();
      for(Alumno alumnos:listaAlumnos){
          System.out.println(alumnos.toString());
-     }
+     }*/
+  
+     Carrera carre = new Carrera(1,"Fundamentos de programacion");
+     control.crearCarrera(carre);
+     
+     Alumno alu4 = new Alumno(35,"Juan","Perez","Antonio", new Date(),carre);
+     control.crearAlumno(alu4);
+     
+        System.out.println(control.bringAlumno(35));
+     
     }
 }
