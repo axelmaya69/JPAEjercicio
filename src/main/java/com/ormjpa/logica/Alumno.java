@@ -9,6 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -29,13 +30,23 @@ public class Alumno implements Serializable {
     //constructor vacio
     public Alumno(){}
     
+    //Se genera la relacion 1 a 1
+    //agregando notacion JPA OtO
+    @OneToOne
+    private Carrera carreer;
+    // se debe modificar el constructor para agregar carrera
+    //y agregarle su getter y setter
+    
+    
     //constructor inicializado con parametros
-    public Alumno(int id, String nombre, String apellidoP,String apellidoM, Date fechaNacimiento){
+    public Alumno(int id, String nombre, String apellidoP,String apellidoM, Date fechaNacimiento,
+            Carrera carreer){
         this.id=id;
         this.nombre=nombre;
         this.apellidoP=apellidoP;
         this.apellidoM=apellidoM;
         this.fechaNacimiento=fechaNacimiento;
+        this.carreer=carreer;
     }
     //getters y setters
     public int getId(){
@@ -75,6 +86,16 @@ public class Alumno implements Serializable {
     public void setFechaNacimiento(Date fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
     }
+
+    public Carrera getCarreer() {
+        return carreer;
+    }
+
+    public void setCarreer(Carrera carreer) {
+        this.carreer = carreer;
+    }
+    
+    
  //se va a "Other Sources" y en el archivo persistence.xml se agrega a la
     //clase Alumno en Include Entity Class
 
