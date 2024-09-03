@@ -1,4 +1,7 @@
- 
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package com.ormjpa.persistencia;
 
 import com.ormjpa.logica.Alumno;
@@ -12,7 +15,6 @@ import javax.persistence.EntityNotFoundException;
 import javax.persistence.Persistence;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
-import javax.persistence.metamodel.SingularAttribute;
 
 /**
  *
@@ -24,10 +26,9 @@ public class AlumnoJpaController implements Serializable {
         this.emf = emf;
     }
     
-      public AlumnoJpaController(){
+         public AlumnoJpaController(){
          emf=Persistence.createEntityManagerFactory("PruebaJpaPU");
     }
-    
     
     private EntityManagerFactory emf = null;
 
@@ -116,8 +117,6 @@ public class AlumnoJpaController implements Serializable {
             em.close();
         }
     }
-    
-    
 
     public Alumno findAlumno(int id) {
         EntityManager em = getEntityManager();
@@ -140,6 +139,5 @@ public class AlumnoJpaController implements Serializable {
             em.close();
         }
     }
-
-  
+    
 }
