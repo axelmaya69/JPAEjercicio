@@ -1,6 +1,4 @@
- 
 package com.ormjpa.logica;
- 
 
 import java.io.Serializable;
 import java.util.Date;
@@ -15,6 +13,7 @@ import javax.persistence.TemporalType;
 
 @Entity //especifica la creacion de una entidad
 public class Alumno implements Serializable {
+
     @Id     //el primary key de la entidad
     @GeneratedValue(strategy = GenerationType.AUTO) //indica la creacion del id 
     //en forma automatica y de la mejor manera
@@ -23,37 +22,40 @@ public class Alumno implements Serializable {
     private String nombre;
     private String apellidoP;
     private String apellidoM;
-    
+
     @Temporal(TemporalType.DATE)  //para fechas
     //ya que solo se quiere fecha sin hora se usa el .DATE
     private Date fechaNacimiento;
+
     //constructor vacio
-    public Alumno(){}
-    
+    public Alumno() {
+    }
+
     //Se genera la relacion 1 a 1
     //agregando notacion JPA OtO
     @OneToOne
     private Carrera carreer;
     // se debe modificar el constructor para agregar carrera
     //y agregarle su getter y setter
-    
-    
+
     //constructor inicializado con parametros
-    public Alumno(int id, String nombre, String apellidoP,String apellidoM, Date fechaNacimiento,
-            Carrera carreer){
-        this.id=id;
-        this.nombre=nombre;
-        this.apellidoP=apellidoP;
-        this.apellidoM=apellidoM;
-        this.fechaNacimiento=fechaNacimiento;
-        this.carreer=carreer;
+    public Alumno(int id, String nombre, String apellidoP, String apellidoM, Date fechaNacimiento,
+            Carrera carreer) {
+        this.id = id;
+        this.nombre = nombre;
+        this.apellidoP = apellidoP;
+        this.apellidoM = apellidoM;
+        this.fechaNacimiento = fechaNacimiento;
+        this.carreer = carreer;
     }
+
     //getters y setters
-    public int getId(){
+    public int getId() {
         return id;
     }
-    public void setId(int id){
-        this.id=id;
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNombre() {
@@ -67,18 +69,19 @@ public class Alumno implements Serializable {
     public String getApellidoP() {
         return apellidoP;
     }
-     
+
     public void setApellidoP(String apellidoP) {
         this.apellidoP = apellidoP;
     }
+
     public String getApellidoM() {
         return apellidoM;
     }
-     
+
     public void setApellidoM(String apellidoM) {
         this.apellidoM = apellidoM;
     }
- 
+
     public Date getFechaNacimiento() {
         return fechaNacimiento;
     }
@@ -94,14 +97,12 @@ public class Alumno implements Serializable {
     public void setCarreer(Carrera carreer) {
         this.carreer = carreer;
     }
-    
-    
- //se va a "Other Sources" y en el archivo persistence.xml se agrega a la
-    //clase Alumno en Include Entity Class
 
+    //se va a "Other Sources" y en el archivo persistence.xml se agrega a la
+    //clase Alumno en Include Entity Class
     @Override
     public String toString() {
         return "Alumno{" + "id=" + id + ", nombre=" + nombre + ", apellidoP=" + apellidoP + ", apellidoM=" + apellidoM + ", fechaNacimiento=" + fechaNacimiento + '}';
     }
-    
+
 }
