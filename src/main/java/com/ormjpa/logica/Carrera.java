@@ -21,7 +21,7 @@ public class Carrera implements Serializable {
     private String nombre;
     
     //notacion uno a muchos
-    @OneToMany
+    @OneToMany(mappedBy = "carre")
     private LinkedList<Materia> listaMaterias;
     
     

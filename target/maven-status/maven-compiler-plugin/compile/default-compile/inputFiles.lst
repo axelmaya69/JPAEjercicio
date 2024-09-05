@@ -2,7 +2,11 @@
 /home/axelmaya/NetBeansProjects/ormjpa/src/main/java/com/ormjpa/persistencia/exceptions/IllegalOrphanException.java
 /home/axelmaya/NetBeansProjects/ormjpa/src/main/java/com/ormjpa/logica/Controladora.java
 /home/axelmaya/NetBeansProjects/ormjpa/src/main/java/com/ormjpa/persistencia/ControladoraPersistencia.java
+/home/axelmaya/NetBeansProjects/ormjpa/src/main/java/com/ormjpa/persistencia/CarreraJpaController.java
+/home/axelmaya/NetBeansProjects/ormjpa/src/main/java/com/ormjpa/persistencia/MateriaJpaController.java
 /home/axelmaya/NetBeansProjects/ormjpa/src/main/java/com/ormjpa/persistencia/exceptions/PreexistingEntityException.java
+/home/axelmaya/NetBeansProjects/ormjpa/src/main/java/com/ormjpa/logica/Carrera.java
+/home/axelmaya/NetBeansProjects/ormjpa/src/main/java/com/ormjpa/logica/Materia.java
 /home/axelmaya/NetBeansProjects/ormjpa/src/main/java/com/ormjpa/persistencia/exceptions/NonexistentEntityException.java
 /home/axelmaya/NetBeansProjects/ormjpa/src/main/java/com/ormjpa/Ormjpa.java
 /home/axelmaya/NetBeansProjects/ormjpa/src/main/java/com/ormjpa/persistencia/AlumnoJpaController.java

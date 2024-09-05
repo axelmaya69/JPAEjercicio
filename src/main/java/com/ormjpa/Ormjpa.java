@@ -4,11 +4,13 @@ package com.ormjpa;
 import com.ormjpa.logica.Alumno;
 import com.ormjpa.logica.Carrera;
 import com.ormjpa.logica.Controladora;
+import com.ormjpa.logica.Materia;
 import com.ormjpa.persistencia.ControladoraPersistencia;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.LinkedList;
 
 /**
  *
@@ -17,7 +19,42 @@ import java.util.Date;
 public class Ormjpa {
 
     public static void main(String[] args) {
+    
+    Controladora control = new Controladora();
+           Materia mat = new Materia(10,"Topicos selectos de programacion","Semestral");
+    Materia mat1 = new Materia(11,"Matematicas Discretas","Semestral");
+    Materia mat2 = new Materia(12,"Base de Datos","Semestral");
+       Materia mat3 = new Materia(13,"Pozole","Semestral");   
+  LinkedList<Materia> listaMaterias = new LinkedList<Materia>();
+  listaMaterias.add(mat);
+  listaMaterias.add(mat1);
+  listaMaterias.add(mat2);
+    listaMaterias.add(mat3);
         
+  
+       
+       
+    control.crearMateria(mat);
+    control.crearMateria(mat1);
+    control.crearMateria(mat2);
+    control.crearMateria(mat3);
+
+  
+    Carrera carr = new Carrera(43,"Ingenieria en sistemas computacionales",listaMaterias);
+    Carrera carr1 = new Carrera(44,"Gastronomia",listaMaterias);
+    Carrera carr2 = new Carrera(45,"Ingenieria en Gestion Empresarial",listaMaterias);
+    control.crearCarrera(carr);
+    control.crearCarrera(carr1);
+    control.crearCarrera(carr2);
+    
+    Alumno al = new Alumno(1,"Axel Daniel","Bartolo", "Maya",new Date(),carr);
+    Alumno al2 = new Alumno(2, "Jorge","Francisco","Pedro",new Date(), carr);
+    Alumno al3 = new Alumno(3, "Luis","Cortez","Yañez",new Date(), carr1);
+    
+    
+    control.crearAlumno(al3);
+    control.crearAlumno(al2);
+    control.crearAlumno(al);
         //Se debe implementar modelo de capas.
 
         //se crea otro objeto a partir de la clase controladorapersistencia
@@ -28,7 +65,7 @@ public class Ormjpa {
         //System.out.println("Hello World!");
         
         
-        Controladora control = new Controladora();
+       // Controladora control = new Controladora();
         //Alumno alu2 = new Alumno(30,"May","FLowers","Antonio", new Date());
         //control.crearAlumno(alu2);
         
@@ -53,13 +90,13 @@ public class Ormjpa {
          System.out.println(alumnos.toString());
      }*/
   
-     Carrera carre = new Carrera(1,"Fundamentos de programacion");
-     control.crearCarrera(carre);
-     
+    //Carrera carre = new Carrera(1,"Fundamentos de programacion");
+    // control.crearCarrera(carre);
+   /*  
      Alumno alu4 = new Alumno(35,"Juan","Perez","Antonio", new Date(),carre);
      control.crearAlumno(alu4);
      
         System.out.println(control.bringAlumno(35));
-     
+     */
     }
 }
