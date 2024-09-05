@@ -4,6 +4,7 @@ package com.ormjpa.persistencia;
 import com.ormjpa.logica.Alumno;
 
 import com.ormjpa.logica.Carrera;
+import com.ormjpa.logica.Materia;
 import com.ormjpa.persistencia.exceptions.NonexistentEntityException;
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +21,7 @@ public class ControladoraPersistencia {
     //y es su unica funcion.
     AlumnoJpaController alujpa = new AlumnoJpaController();
     CarreraJpaController carrerajpa = new CarreraJpaController();
-
+    MateriaJpaController materiajpa = new MateriaJpaController();
     
     //metodo creado para usar en la clase Controladora.java
     public void createAlumno(Alumno alu) {
@@ -85,6 +86,37 @@ public class ControladoraPersistencia {
         List<Carrera> listCarr= carrerajpa.findCarreraEntities();
      ArrayList<Carrera> listaCarreras=new ArrayList<Carrera>(listCarr);
      return listaCarreras;
+    }
+
+    public void createMateria(Materia mat) {
+     materiajpa.create(mat);
+    }
+
+    public void deleteMateria(int id) {
+        try {
+            materiajpa.destroy(id);
+        } catch (NonexistentEntityException ex) {
+            Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public void updateMateria(Materia mat) {
+        try {
+            materiajpa.edit(mat);
+        } catch (Exception ex) {
+            Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public Materia bringMateria(int id) {
+    return materiajpa.findMateria(id);
+        
+    }
+
+    public ArrayList<Materia> bringMaterias() {
+        List<Materia> listMaterias= materiajpa.findMateriaEntities();
+     ArrayList<Materia> listaMaterias=new ArrayList<Materia>(listMaterias);
+     return listaMaterias;
     }
 
    
