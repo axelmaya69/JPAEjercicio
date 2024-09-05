@@ -61,4 +61,21 @@ public class Controladora {
         return controlPer.bringCarreras();
     }
 
+    
+    //metodos para Materia
+    public void crearMateria(Materia mat){
+       controlPer.createMateria(mat);
+    }
+    public void deleteMateria(int id){
+        controlPer.deleteMateria(id);
+    }
+    public void updateMateria(Materia mat){
+        controlPer.updateMateria(mat);
+    }
+    public Materia bringMateria(int id){
+        return controlPer.bringMateria(id);
+    }
+    public ArrayList<Materia> bringMaterias(){
+        return controlPer.bringMaterias();
+    }
 }

@@ -1,6 +1,7 @@
  
 package com.ormjpa.logica;
 
+import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -11,7 +12,7 @@ import javax.persistence.Id;
  * @author axelmaya
  */ 
 @Entity
-public class Materia {
+public class Materia implements Serializable {
     
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
@@ -27,6 +28,9 @@ public class Materia {
     public Materia(){
         
     }
+    
+    
+    
 
     public int getId() {
         return id;

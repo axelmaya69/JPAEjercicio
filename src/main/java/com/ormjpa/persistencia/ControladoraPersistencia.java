@@ -2,7 +2,7 @@
 package com.ormjpa.persistencia;
 
 import com.ormjpa.logica.Alumno;
-import static com.ormjpa.logica.Alumno_.id;
+
 import com.ormjpa.logica.Carrera;
 import com.ormjpa.persistencia.exceptions.NonexistentEntityException;
 import java.util.ArrayList;
@@ -12,7 +12,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author axelmaya
+ * @author axelmaya 
  */
 public class ControladoraPersistencia {
     
