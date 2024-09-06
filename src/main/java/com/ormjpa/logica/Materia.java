@@ -6,7 +6,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 
 /**
@@ -26,6 +25,14 @@ public class Materia implements Serializable {
         this.id = id;
         this.nombre = nombre;
         this.tipo = tipo;
+        this.carre = carre;
+    }
+
+    public Carrera getCarre() {
+        return carre;
+    }
+
+    public void setCarre(Carrera carre) {
         this.carre = carre;
     }
 

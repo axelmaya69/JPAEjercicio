@@ -30,10 +30,10 @@ public class Ormjpa {
         control.crearCarrera(carr1);
         control.crearCarrera(carr2);
 
-        Materia mat = new Materia(10, "Topicos selectos de programacion", "Semestral");
-        Materia mat1 = new Materia(11, "Matematicas Discretas", "Semestral");
-        Materia mat2 = new Materia(12, "Base de Datos", "Semestral");
-        Materia mat3 = new Materia(13, "Pozole", "Semestral");
+        Materia mat = new Materia(10, "Topicos selectos de programacion", "Semestral",carr);
+        Materia mat1 = new Materia(11, "Matematicas Discretas", "Semestral",carr);
+        Materia mat2 = new Materia(12, "Base de Datos", "Semestral",carr);
+        Materia mat3 = new Materia(13, "Pozole", "Semestral",carr);
 
         listaMaterias.add(mat);
         listaMaterias.add(mat1);
