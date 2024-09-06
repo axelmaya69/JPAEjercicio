@@ -22,11 +22,14 @@ public class Materia implements Serializable {
     private String nombre;
     private String tipo;
 
-    public Materia(int id, String nombre, String tipo) {
+    public Materia(int id, String nombre, String tipo, Carrera carre) {
         this.id = id;
         this.nombre = nombre;
         this.tipo = tipo;
+        this.carre = carre;
     }
+
+ 
     public Materia(){
         
     }
