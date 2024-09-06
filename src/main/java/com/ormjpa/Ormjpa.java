@@ -21,31 +21,36 @@ public class Ormjpa {
     public static void main(String[] args) {
     
     Controladora control = new Controladora();
-           Materia mat = new Materia(10,"Topicos selectos de programacion","Semestral");
+      
+  LinkedList<Materia> listaMaterias = new LinkedList<Materia>();
+  
+   Carrera carr = new Carrera(43,"Ingenieria en sistemas computacionales",listaMaterias);
+    Carrera carr1 = new Carrera(44,"Gastronomia",listaMaterias);
+    Carrera carr2 = new Carrera(45,"Ingenieria en Gestion Empresarial",listaMaterias);
+    control.crearCarrera(carr);
+    control.crearCarrera(carr1);
+    control.crearCarrera(carr2);
+
+        
+  
+            Materia mat = new Materia(10,"Topicos selectos de programacion","Semestral");
     Materia mat1 = new Materia(11,"Matematicas Discretas","Semestral");
     Materia mat2 = new Materia(12,"Base de Datos","Semestral");
        Materia mat3 = new Materia(13,"Pozole","Semestral");   
-  LinkedList<Materia> listaMaterias = new LinkedList<Materia>();
-  listaMaterias.add(mat);
+    
+       
+         listaMaterias.add(mat);
   listaMaterias.add(mat1);
   listaMaterias.add(mat2);
     listaMaterias.add(mat3);
-        
-  
-       
-       
+    
     control.crearMateria(mat);
     control.crearMateria(mat1);
     control.crearMateria(mat2);
     control.crearMateria(mat3);
 
   
-    Carrera carr = new Carrera(43,"Ingenieria en sistemas computacionales",listaMaterias);
-    Carrera carr1 = new Carrera(44,"Gastronomia",listaMaterias);
-    Carrera carr2 = new Carrera(45,"Ingenieria en Gestion Empresarial",listaMaterias);
-    control.crearCarrera(carr);
-    control.crearCarrera(carr1);
-    control.crearCarrera(carr2);
+   
     
     Alumno al = new Alumno(1,"Axel Daniel","Bartolo", "Maya",new Date(),carr);
     Alumno al2 = new Alumno(2, "Jorge","Francisco","Pedro",new Date(), carr);
